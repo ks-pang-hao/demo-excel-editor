@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>demo-excel-editor</display-name>
+    <welcome-file-list>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>jakarta.faces.FACELETS_LIBRARIES</param-name>
+        <param-value>/WEB-INF/functions.taglib.xml</param-value>
+    </context-param>
+
+    <mime-mapping>
+        <extension>ecss</extension>
+        <mime-type>text/css</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>xhtml</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>woff</extension>
+        <mime-type>application/x-font-woff</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>woff2</extension>
+        <mime-type>application/x-font-woff2</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>eot</extension>
+        <mime-type>application/vnd.ms-fontobject</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>otf</extension>
+        <mime-type>font/opentype</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>ttf</extension>
+        <mime-type>application/x-font-ttf</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>svg</extension>
+        <mime-type>image/svg+xml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pdf</extension>
+        <mime-type>application/pdf</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>jsp</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+
+    <context-param>
+        <param-name>HP-INSTANCE</param-name>
+        <param-value>DEVELOPMENT INSTANCE</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jakarta.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jakarta.faces.FACELETS_REFRESH_PERIOD</param-name>
+        <param-value>0</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+
+    <!--<context-param>-->
+    <!--<param-name>jakarta.faces.validator.ENABLE_VALIDATE_WHOLE_BEAN</param-name>-->
+    <!--<param-value>true</param-value>-->
+    <!--</context-param>-->
+    <context-param>
+        <param-name>jakarta.faces.ENABLE_CDI_RESOLVER_CHAIN</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jakarta.faces.ENABLE_WEBSOCKET_ENDPOINT</param-name>
+        <param-value>true</param-value>
+    </context-param>
+<!--    <context-param>-->
+<!--        <param-name>jakarta.faces.WEBSOCKET_ENDPOINT_PORT</param-name>-->
+<!--        <param-value>8000</param-value>-->
+<!--    </context-param>-->
+
+    <context-param>
+        <param-name>jakarta.faces.STATE_SAVING_METHOD</param-name>
+        <param-value>server</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.ajax4jsf.handleViewExpiredOnClient</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.sun.faces.enableRestoreView11Compatibility</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jakarta.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.sun.faces.validateXml</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jakarta.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jakarta.faces.FACELETS_SKIP_COMMENTS</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jakarta.faces.FACELETS_BUFFER_SIZE</param-name>
+        <param-value>500000</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.sun.faces.responseBufferSize</param-name>
+        <param-value>500000</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.NUMBER_OF_VIEWS_IN_SESSION</param-name>
+        <param-value>10</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.COMPRESS_STATE_IN_SESSION</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.SERIALIZE_STATE_IN_SESSION</param-name>
+        <param-value>false</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>org.apache.myfaces.CACHE_EL_EXPRESSIONS</param-name>
+        <param-value>alwaysRecompile</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.SUPPORT_JSP_AND_FACES_EL</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.EXPRESSION_FACTORY</param-name>
+        <param-value>org.apache.el.ExpressionFactoryImpl</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.SUPPORT_MANAGED_BEANS</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.CHECK_ID_PRODUCTION_MODE</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.apache.myfaces.EARLY_FLUSH_ENABLED</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>org.omnifaces.SOCKET_ENDPOINT_ENABLED</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>primefaces.FONT_AWESOME</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>primefaces.SUBMIT</param-name>
+        <param-value>partial</param-value>
+    </context-param>
+    <!--    <context-param>-->
+    <!--        <param-name>primefaces.MOVE_SCRIPTS_TO_BOTTOM</param-name>-->
+    <!--        <param-value>true</param-value>-->
+    <!--    </context-param>-->
+    <context-param>
+        <param-name>primefaces.THEME</param-name>
+        <param-value>saga</param-value>
+    </context-param>
+    <context-param>
+        <param-name>primefaces.CLIENT_SIDE_VALIDATION</param-name>
+        <param-value>true</param-value>
+    </context-param>
+<!--    <context-param>-->
+<!--        <param-name>primefaces.UPLOADER</param-name>-->
+<!--        <param-value>auto</param-value>-->
+<!--    </context-param>-->
+    <context-param>
+        <param-name>jakarta.faces.AUTOMATIC_EXTENSIONLESS_MAPPING</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+<!--    <filter>-->
+<!--        <filter-name>PrimeFaces FileUpload Filter</filter-name>-->
+<!--        <filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>PrimeFaces FileUpload Filter</filter-name>-->
+<!--        <servlet-name>Faces Servlet</servlet-name>-->
+<!--    </filter-mapping>-->
+</web-app>
