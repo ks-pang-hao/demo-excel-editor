@@ -11,7 +11,7 @@ The generation of the executable jar file can be performed by issuing the follow
 
 This will create an executable jar file **demoexceleditor.jar** within the _target_ maven folder. This can be started by executing the following command
 
-    java -jar target/demoexceleditor.jar
+    java -jar target/demo-excel-editor.jar
 
 
 
@@ -30,7 +30,7 @@ unit and integration tests are run on pressing Enter in the command terminal; yo
 
 To launch the test page, open your browser at the following URL
 
-    http://localhost:9080/index.html  
+    http://localhost:9080/index.xhtml  
 
 
 
